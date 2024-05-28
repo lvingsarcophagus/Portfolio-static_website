@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> 
+    <script src="script.js"></script> 
+    <title>Portfolio website complete</title>
+</head>
+<body>
+    <section>
+        <nav>
+            <div class="container nav-container">
+                <a href="#" class="logo">nj</a>
+                <ul class="nav-links">
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html"class="active">Contact</a></li>
+                    <li><a href="skill.html">skills</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+    <section>
+        <video autoplay loop muted id="video-bg">
+            <source src="mt.mp4" type="video/mp4">
+        </video>
+    </section>
+    <section id="form-new">
+    <div class="container-2">
+        <form action="action_page.php">
+      
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+      
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      
+          <input type="submit" value="Submit">
+      
+        </form>
+        
+      </div>
+    </section>
+    </body>
+    <footer class="footer">
+        <!-- social icons -->
+        <ul class="social-icons">
+          <li>
+            <a href="https://tryhackme.com/" class="social-iconOne">
+              <i class="fa fa-flask"></i>
+            </a>
+          </li><br>
+          <li>
+            <a href="https://www.linkedin.com/in/nayan-joshy-21443027b/" class="social-iconTwo">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li><br>
+          <li>
+            <a href="https://www.linkedin.com/in/nayan-joshy-21443027b/" class="social-iconThree">
+              <i class="fab fa-github"></i>
+            </a>
+          </li><br>
+          <li>
+            <a href="https://medium.com/" class="social-iconFour">
+              <i class="fab fa-medium"></i>
+            </a>
+          </li><br>
+          <li>
+            <a href="https://www.instagram.com/livingsarcophagus/" class="social-iconFive">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li><br>
+        </ul>
+        <footer>
+            <p class="footer-about">&copy; Nayan Joshy Maniyath Joshy 2023</p>
+        </footer>
+    </body>
+</html>

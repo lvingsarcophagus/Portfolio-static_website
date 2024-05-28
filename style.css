@@ -1,0 +1,728 @@
+*{
+ margin:0px;
+ padding:0px;
+ box-sizing: border-box;
+ text-decoration: none;
+ list-style: none;
+ outline:none;
+ border:none;
+ width:100%;
+
+}
+:root{
+    --color-primary:#29d882;
+    --color-primary-variant:#00bd95;
+    --color-white:#ffff;
+    --color-light:#ffff;
+    --color-dark:#88949b;
+    --color-black:#171c23;
+    --color-off-black:#21272f;
+    --bg-variant:#29d8831c;
+    --transition: -4s .ease;
+
+
+
+}
+body{
+   background: var(--color-white);
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color: var(--color-off-black); 
+   overflow: hidden;
+}
+#video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover; /* This ensures the video covers the whole element */
+}
+html{
+    scroll-behavior: smooth;
+
+    }
+
+h1 h2 h3 h4 h5 {
+    font-weight: 700px;
+    line-height: 130%;
+    
+
+
+}
+h1{
+    font-size: 50px;
+    z-index: 1;
+    margin-top: 80px;
+    padding-bottom: 10px;
+}
+@keyframes typingAnimation {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.typing-text::after {
+    content: '|'; /* Cursor character */
+    display: inline-block;
+    width: 0.1em; /* Adjust the cursor width as needed */
+    margin-left: 0.2em; /* Adjust the space between cursor and text as needed */
+    animation: blinkCursor 0.7s infinite alternate;
+}
+
+@keyframes blinkCursor {
+    to {
+        opacity:0;
+    }
+}
+
+
+h2{
+    font-size: 44px;
+    text-align: center;
+    margin-bottom: 4rem;
+    width: fit-content;
+    margin: auto;
+    color: var(--color-black);
+    position: relative;
+    z-index: 1;
+
+    
+}
+
+
+h3{
+    font-size: 34px;
+    z-index: 1;
+
+}
+h4{
+    font-size: 24px;
+    z-index: 1;
+
+}
+h5{
+    font-size: 20px;
+    z-index: 1;
+
+}
+p{
+    font-size: 19px;
+    line-height: 150%;
+    z-index: 1;
+
+}
+#video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+
+}
+
+img{
+    display: block;
+    width: 200px;
+    border-radius: 20px;
+}
+.button-container {
+    margin-top: 1rem; /* Adjust as needed */
+}
+.btn{
+    display: inline-block;
+    width:fit-content;
+    font-size: 19px;
+    font-weight: 500;
+    padding: 14px 32px;
+    border-radius: 30px;
+    background: var(--color-primary);
+    color: var(--color-black);
+    box-shadow: 0 2px 6px rgba(0,0,0.6);
+    transition: var(--transition)
+    
+
+}
+.btn:hover {
+    background: var(--color-primary-variant);
+    color: var(--color-white);
+}
+
+.typing-text {
+    overflow: hidden;
+    margin-top: 20%;
+    text-align: 20px;
+    white-space: nowrap;
+    display: inline-block;
+    width: 100%;
+    animation: typingAnimation 3s steps(20, end) infinite;
+    color: var(--color-off-black);
+}
+.btn:hover{
+    background: #0760dc;
+    box-shadow: none;
+}
+section{
+    padding: 2rem 0px;
+
+}
+.container{
+    width: 90%;
+    max-width: 1420px;
+    margin:0 auto;
+
+}
+
+nav{
+    width:100%;
+    display:flex;
+    align-items: center;
+    height:5rem;
+    position: fixed;
+    z-index: 10;
+    left:0px;
+    top:0px;
+}
+.nav-container{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--color-black)
+
+}
+.nav-links{
+display: flex;
+align-items: center;
+gap:4rem;
+}
+
+.nav-links li a{
+    color: var(--color-dark);
+    font-size: 19px;
+    position:relative;
+    transition: var(--transition);
+
+
+}
+.nav-links li a::before {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--color-primary);
+    position: absolute;
+    border-radius: 6px;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.nav-links li a.active::before, .nav-links li a:hover::before {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .floating-box {
+        width: 90%; /* Adjust as needed */
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-left,
+    .about-right {
+        max-width: 100%; /* Adjust as needed */
+        text-align: center;
+    }
+}
+
+/* FOR  */
+/* Add this media query for even smaller screens (e.g., mobile phones) */
+@media (max-width: 480px) {
+    .floating-box {
+        width: 95%; /* Adjust as needed */
+    }
+}
+
+.floating-box {
+    position: fixed;
+    width:80%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #29d882;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    width: 60%; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 80%;
+} 
+.box1{
+    padding:40px;
+    align-items: center;
+    margin-bottom: 0px;
+    margin-top:0px
+}
+.about-container {
+    display: flex;
+    align-items: center;
+}
+
+.about-left {
+    flex: 1;
+    max-width: 50%; /* Adjust as needed */
+    text-align: center;
+}
+
+.about-right {
+    flex: 1;
+    max-width: 50%; /* Adjust as needed */
+    text-align: left;
+}
+
+.about-right h1 {
+    font-size: 24px;
+    color: var(--color-white);
+    margin-bottom: -25px;
+}
+
+.about-right p {
+    font-size: 19px;
+    line-height: 1.6;
+    color: var(--color-off-black);
+    margin-bottom: 20px;
+}
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.event {
+    display: flex;
+    margin-bottom: 30px;
+    border-radius: 15px; /* Make the boxes more rounded */
+    overflow: hidden; /* Ensure rounded corners are applied */
+    transition: background-color 0.3s; /* Add transition for hover effect */
+    position: relative; /* Position relative for pseudo-element */
+}
+
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.event {
+    display: flex;
+    margin-bottom: 30px;
+    border-radius: 15px; /* Make the boxes more rounded */
+    overflow: hidden; /* Ensure rounded corners are applied */
+    transition: background-color 0.3s; /* Add transition for hover effect */
+    position: relative; /* Position relative for pseudo-element */
+}
+
+.date {
+    background-color: #29d882;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: bold;
+    min-width: 100px;
+    text-align: center;
+    border-radius: 15px; /* Apply rounded corner to all sides */
+    position: relative;
+    z-index: 2;
+}
+
+.content {
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    border-radius: 15px; /* Apply rounded corner to all sides */
+    flex-grow: 1;
+    margin-left: 10px; /* Add margin between date and content */
+}
+
+.event::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 2px;
+    background-color: #29d882; /* Color of the line */
+    z-index: 1;
+}
+
+.event:hover .date {
+    background-color: #0760dc; /* Change background color on hover */
+}
+
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.project {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.project im {
+    width: 100px; /* Adjust image width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+}
+
+.project-info  {
+    padding: 10px;
+    align-items: center;
+    
+}
+
+h6{
+    font-size: 44px;
+    text-align: center;
+    margin-bottom: 4rem;
+    width: fit-content;
+    margin: auto;
+    color: var(--color-black);
+ 
+
+    
+}
+
+.img-icon{
+    text-align: center  ;
+}
+
+/* form css */
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .container-2 {
+    position: fixed;
+    width:80%;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #29d882;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    width: 60%; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 80%;
+  }
+
+ 
+  
+  .social-icons {
+    font-size: 20px;
+  }
+  .services .icon-box {
+    text-align: center;
+    background: rgba(53, 198, 80, 0.1);
+    padding: 80px 20px;
+    transition: all ease-in-out 0.3s;
+  }
+  
+  .services .icon-box .icon {
+    margin: 0 auto;
+    width: 64px;
+    height: 64px;
+    background: #1cc132;
+    border-radius: 5px;
+    transition: all 0.3s ease-out 0s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transform-style: preserve-3d;
+  }
+  
+  .services .icon-box .icon i {
+    color: #fff;
+    font-size: 28px;
+  }
+  
+  .services .icon-box .icon::before {
+    position: absolute;
+    content: "";
+    left: -8px;
+    top: -8px;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+    transition: all 0.3s ease-out 0s;
+    transform: translateZ(-1px);
+  }
+  
+  .services .icon-box h4 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 24px;
+  }
+  
+  .services .icon-box h4 a {
+    color: #fff;
+  }
+  
+  .services .icon-box p {
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  
+  .services .icon-box:hover {
+    background: #3f7646;
+    border-color: #170758;
+  }
+  
+  .services .icon-box:hover .icon {
+    background: #fff;
+  }
+  
+  .services .icon-box:hover .icon i {
+    color: #18d146;
+    opacity: 0.5;
+  }
+  
+  .services .icon-box:hover .icon::before {
+    background: #07582a;
+  }
+  
+  .services .icon-box:hover h4 a,
+  .services .icon-box:hover p {
+    color: #fff;
+  }
+  .container1 {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 30px;
+  }
+  .section-title h2 {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0;
+    line-height: 1px;
+    margin: 0 0 20px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #aaaaaa;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .section-title h2::after {
+    content: "";
+    width: 120px;
+    height: 1px;
+    display: inline-block;
+    background: #28db99;
+    margin: 4px 10px;
+  }
+  
+  .section-title p {
+    margin: 0;
+    margin: -15px 0 15px 0;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+  }
+  h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+/*
+=============== 
+Footer
+===============
+*/
+.footer-about{
+    margin-top: 49%;
+    margin-left: 42%;
+    color: #18d146;
+}
+.footer {
+    padding-bottom: 2rem;
+    background: transparent;
+    display: grid;
+    place-items: center;
+    margin-left: 10%;
+    margin-top: 5%;
+  }
+  .footer .social-iconOne {
+    color: darkmagenta;
+    margin-bottom: 2rem;
+  }
+  .footer .social-iconTwo {
+    color: royalblue;
+    
+  }
+  
+  .footer .social-iconThree {
+    color: grey;
+  }
+  
+  
+  .footer .social-iconFour {
+    color: greenyellow;
+  }
+  
+  .footer .social-iconFive {
+    color: hotpink;
+  }
+  
+  
+  .footer .social-iconOne:hover {
+    color: darkviolet;
+  }
+  
+  .footer .social-iconTwo:hover {
+    color: darkblue;
+  }
+  
+  .footer .social-iconThree:hover {
+    color: black;
+  }
+  
+  .footer .social-iconFour:hover {
+    color: limegreen;
+  }
+  
+  .footer .social-iconFive:hover {
+    color: deeppink;
+  }
+  
+  .footer p {
+    font-size: 1.25rem;
+    text-transform: capitalize;
+  }
+  /*
+=============== 
+Skills
+===============
+*/
+@media screen and (min-width: 768px) {
+    .skills-center {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      -webkit-column-gap: 2rem;
+      -moz-column-gap: 2rem;
+      column-gap: 2rem;
+    }
+  }
+  .skills {
+    background: var(--clr-primary-9);
+    margin-left: 6%;
+  }
+  .skills h3 {
+    margin-left: 20px;
+    margin: 6.5rem 0;
+    color: var(--clr-primary-1);
+  }
+  .skill {
+    margin-bottom: 5%;
+    opacity: 0.9;
+  }
+  .skill p {
+    text-transform: initial;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+    color: grey;
+    box-shadow: #171c23;
+  }
+  .skill-container {
+    background: var(--clr-white);
+    height: 1rem;
+    width: 100%;
+    border-radius: var(--radius);
+    position: relative;
+  }
+  .skill-value {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #1cc132;
+    height: 100%;
+    width: 50%;
+    border-radius: var(--radius);
+  }
+  .value-70 {
+    width: 70%;
+  }
+  .value-80 {
+    width: 80%;
+  }
+  .skill-text {
+    text-align: justify;
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  .skill-text-70 {
+    left: 70%;
+  }
+  .skill-text-80 {
+    left: 80%;
+  }
